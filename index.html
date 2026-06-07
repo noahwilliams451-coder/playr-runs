@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PlayersOnly Open Runs — Portland, OR</title>
+  <title>PlayersOnly Open Runs - Portland, OR</title>
   <meta name="description" content="College & pro-level open runs in Portland, OR. $5/session. Request your spot." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://runs.playrapp.net" />
-  <meta property="og:title"       content="PlayersOnly Open Runs — Portland, OR" />
+  <meta property="og:title"       content="PlayersOnly Open Runs - Portland, OR" />
   <meta property="og:description" content="College & pro-level open runs. $5/session. Request your spot." />
   <meta name="twitter:card"       content="summary_large_image" />
 
@@ -243,7 +243,7 @@
   </section>
 
   <section class="a4">
-    <div class="section-head">Upcoming Runs — tap to request your spot</div>
+    <div class="section-head">Upcoming Runs - tap to request your spot</div>
     <div class="runs-list" id="runs-list">
       <div class="skeleton-card"><div class="sk sk-title"></div><div class="sk sk-sub"></div></div>
       <div class="skeleton-card"><div class="sk sk-title"></div><div class="sk sk-sub"></div></div>
@@ -253,7 +253,7 @@
   <section style="margin-top:40px" class="a4">
     <div class="section-head">How it works</div>
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><div><div class="step-title">Pick a run & request your spot</div><div class="step-desc">Tap any run above. Takes 60 seconds — just your name, email, position, and level.</div></div></div>
+      <div class="step"><div class="step-num">1</div><div><div class="step-title">Pick a run & request your spot</div><div class="step-desc">Tap any run above. Takes 60 seconds - just your name, email, position, and level.</div></div></div>
       <div class="step"><div class="step-num">2</div><div><div class="step-title">Coach reviews your profile</div><div class="step-desc">The coach sees your experience level before approving. Spots aren't first-come-first-served.</div></div></div>
       <div class="step"><div class="step-num">3</div><div><div class="step-title">Get approved → pay $5</div><div class="step-desc">You'll get an email when approved. Open the PlayR app, pay $5, and your spot is locked.</div></div></div>
       <div class="step"><div class="step-num">4</div><div><div class="step-title">Show up and run</div><div class="step-desc">Court address and full roster are in the app. Your stats and OVR rating update after every run.</div></div></div>
@@ -268,7 +268,7 @@
       <div class="level-card"><div class="level-icon">🏆</div><div><div class="level-name">High-Level HS</div><div class="level-sub">Varsity, AAU, elite prospects</div></div></div>
       <div class="level-card"><div class="level-icon">🎯</div><div><div class="level-name">Serious Rec</div><div class="level-sub">Competitive adult league players</div></div></div>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6">The coach reviews every profile before approving. If your level isn't the right fit, you'll be declined — no hard feelings.</p>
+    <p style="font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6">The coach reviews every profile before approving. If your level isn't the right fit, you'll be declined - no hard feelings.</p>
   </section>
 
   <section style="margin:40px 0 48px" class="a5">
@@ -282,14 +282,14 @@
 </div>
 
 <footer>
-  <div>Powered by <a href="https://playrapp.net" target="_blank">PlayR</a> — The Basketball Community App</div>
+  <div>Powered by <a href="https://playrapp.net" target="_blank">PlayR</a> - The Basketball Community App</div>
   <div style="margin-top:6px;color:#555">© 2026 PlayR · Portland, OR</div>
 </footer>
 
 <div id="toast"></div>
 
 <!-- ══════════════════════════════════════════════════════════════
-     REQUEST MODAL — 3 steps: Account → Profile → Done
+     REQUEST MODAL - 3 steps: Account → Profile → Done
 ═══════════════════════════════════════════════════════════════ -->
 <div class="modal-backdrop" id="modal-backdrop" onclick="backdropClick(event)">
   <div class="modal" id="modal" style="position:relative">
@@ -305,14 +305,14 @@
 
     <!-- Selected run chip -->
     <div class="run-chip" id="run-chip" style="display:none">
-      <div class="run-chip-title" id="chip-title">—</div>
-      <div class="run-chip-meta" id="chip-meta">—</div>
+      <div class="run-chip-title" id="chip-title">-</div>
+      <div class="run-chip-meta" id="chip-meta">-</div>
     </div>
 
     <!-- ── STEP 0: Create account ── -->
     <div id="step-0">
       <div class="modal-title">Create your account</div>
-      <div class="modal-sub">Free PlayR profile — the coach sees this before approving your request.</div>
+      <div class="modal-sub">Free PlayR profile - the coach sees this before approving your request.</div>
       <div id="step0-error" class="error-msg" style="display:none"></div>
       <div class="field-row">
         <div class="field"><label>First name</label><input id="inp-first" type="text" placeholder="Marcus" autocomplete="given-name" /></div>
@@ -368,7 +368,7 @@
         <div class="success-title">Request sent!</div>
         <div class="success-sub">
           The coach will review your profile and get back to you.<br>
-          Check your email — <strong id="confirm-email"></strong> — for a confirmation and next steps.
+          Check your email - <strong id="confirm-email"></strong> - for a confirmation and next steps.
         </div>
         <div class="success-check">✓ Request submitted</div><br>
         <div class="success-check">✓ Profile created on PlayR</div>
@@ -420,7 +420,7 @@ async function loadRuns() {
     }));
 
     if (!games.length) {
-      list.innerHTML = `<div class="empty"><strong>Runs dropping soon</strong>The coach is finalizing the schedule — check back shortly or request your spot below so you're first in line.</div>`;
+      list.innerHTML = `<div class="empty"><strong>Runs dropping soon</strong>The coach is finalizing the schedule - check back shortly or request your spot below so you're first in line.</div>`;
       return;
     }
     list.innerHTML = games.map(g => renderRun(g)).join('');
@@ -542,7 +542,7 @@ async function submitStep0() {
     });
 
     if (signUpErr) {
-      // Already registered — try sign in instead
+      // Already registered - try sign in instead
       if (signUpErr.message.toLowerCase().includes('already') || signUpErr.message.toLowerCase().includes('registered')) {
         const { data: signInData, error: signInErr } = await db.auth.signInWithPassword({ email, password: pass });
         if (signInErr) { showErr(errEl, 'Account already exists. Check your password.'); return; }
